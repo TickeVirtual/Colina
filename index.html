@@ -283,6 +283,7 @@
                   // Obtener los valores de los parámetros
                   var nro_boleta = params.has('boleta') ? params.get('boleta') : "---";
                   var nombre_cliente = params.has('cliente') ? params.get('cliente') : "==Cliente==";
+                  var nombre = params.has('nombre') ? params.get('nombre') : "==Cliente==";
                   var telefono = params.has('telefono') ? params.get('telefono') : "==Cliente==";
                   var codigo_pais = params.has('codigo_pais') ? params.get('codigo_pais') : "+";
                   var fecha = params.has('fecha') ? params.get('fecha') : "dd/mm/aaaa hh:mm:ss";
@@ -461,7 +462,7 @@
                                 // Acortamos la URL actual
                                 var shortedURL = await shortURL(currentURL);
                                 
-                                var message = 'Hola!! somos de la lavandería ,  adjuntamos su ticket de atención virtual. Click en el link para ver el ticket 👇 ' +     
+                                var message = 'Hola!! somos de la lavandería ,  adjuntamos su ticket de atención virtual. Click en el link para ver el ticket  ' +     
                                 shortedURL;
                                 
                                 var whatsappLink = 'https://api.whatsapp.com/send?phone=' + codigo_pais + telefono + '&text=' + encodeURIComponent(message)+'?sharelink=1';
@@ -561,6 +562,7 @@
                           var nroBoletaElement = document.getElementById("nro_boleta_id").textContent = nro_boleta;
                           var fechaElement = document.getElementById("fecha").textContent = fecha;
                           var nombre_clientElement = document.getElementById("nombre_client").textContent = nombre_cliente;
+                          var nombreElement = document.getElementById("nombre").textContent = nombre;
                           var fecha_entregaElement = document.getElementById("fecha_entrega").textContent = fecha_entrega;
                           var totalElement = document.getElementById("total");totalElement.textContent = parseFloat(total).toFixed(2);
                           var descuentoElement = document.getElementById("descuento");descuentoElement.textContent = parseFloat(descuento).toFixed(2);
@@ -619,7 +621,8 @@
                                   // Acortar la URL
                                   const shortedURL = await shortURL(longURL);
 
-                                  const captionMessage = `*Ticket de atención*\n\nHola!! Adjuntamos su ticket de atención👉🏻.\nAquí su ticket: ${shortedURL}`;
+                                  const captionMessage = `*Ticket de atención*\n\nHola!! ${nombre} Adjuntamos su ticket de atención.\nAquí su ticket: ${shortedURL}`;
+                                  
 
                                   const body = {
                                       number: numeroTelefono,
