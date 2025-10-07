@@ -230,8 +230,8 @@ async function shortURL(urlLarga) {
 
         sendMessageButton.disabled = true; // Deshabilitar botón mientras se envía
 
-        const url = "https://mensajero-evolution-api.ykf6ye.easypanel.host/message/sendMedia/Rosszuleinstancia"; // Cambia NOMBRE_INSTANCIA
-        const apikey = "04C285AC718A-46C9-BA00-25DC857B9B9D"; // Coloca aquí tu API key
+        const url = "https://mensajero-evolution-api.ykf6ye.easypanel.host/message/sendMedia/colinainstancia"; // Cambia NOMBRE_INSTANCIA
+        const apikey = "233D4AEC5769-4C3B-ADA5-0C77BB4C4F26"; // Coloca aquí tu API key
         const numeroTelefono = `+51${telefono}`; // Coloca el número de teléfono del destinatario
         const longURL = window.location.href; // Obtiene la URL actual
 
@@ -338,6 +338,7 @@ function redondearPersonalizado(valor) {
 }
    
        
+
 
 
 
