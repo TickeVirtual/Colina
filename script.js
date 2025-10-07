@@ -256,7 +256,7 @@ async function shortURL(urlLarga) {
                       "mediatype": "image",
                       "mimetype": "image/png",
                       "caption":captionMessage,
-                      "media": "https://iili.io/FdbmN6P.png",
+                      "media": "https://iili.io/2P4U7v2.png",
                       "fileName": "Imagem.png",
                       "delay": 1200,
                       "quoted": {
@@ -338,6 +338,7 @@ function redondearPersonalizado(valor) {
 }
    
        
+
 
 
 
